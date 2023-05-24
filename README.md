@@ -1,4 +1,4 @@
-# RealMap.sol
+# MapWithKeys.sol
 
 Nothing fancy. Just a simple, easy, out-of-the-box mapping with keys in Solidity programming language.
 
