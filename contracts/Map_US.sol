@@ -5,21 +5,27 @@ pragma solidity ^0.8.9;
 // import "hardhat/console.sol";
 
 /**
- * @title Mapping Uint256 to Address
+ * @title Mapping Uint256 to String
  * @author lidangzzz
  * @notice Null.
  */
 
-contract Map_UA{
-  mapping (uint256=>address) map;
+contract Map_US{
+  mapping (uint256=>string) map;
   uint256[] keyArray;
 
   constructor () {
   }
 
   /**
-   * Here is a function for initializing the contract
+   * Compare two strings and return true if they are equal
+   * @param _a string a
+   * @param _b string b
    */
+  function equals(string memory _a, string memory _b) public pure returns (bool){
+    return keccak256(bytes(_a)) == keccak256(bytes(_b));
+  }
+
   function initialize() public {
 
   }
@@ -29,7 +35,7 @@ contract Map_UA{
    * @param _key The key
    * @param _value The value
    */
-  function set(uint256 _key, address _value) public {
+  function set(uint256 _key, string memory _value) public {
     map[_key] = _value;
     if (!contains(_key)) {
       keyArray.push(_key);
@@ -41,9 +47,9 @@ contract Map_UA{
    * @param _key The key
    * @return The value of the key, and a bool indicating if the key exists
    */
-  function get(uint256 _key) public view returns (address, bool) {
+  function get(uint256 _key) public view returns (string memory, bool) {
     if (!contains(_key)) {
-      return (0x0000000000000000000000000000000000000000, false);
+      return ("", false);
     }
     return (map[_key], true);
   }
@@ -53,8 +59,8 @@ contract Map_UA{
    * @param _key The key to check
    */
   function contains(uint256 _key) public view returns (bool) {
-    // if the value is not zero, then the key exists
-    if (map[_key] != 0x0000000000000000000000000000000000000000) {return true;}
+    // if the value is not empty string, then the key exists
+    if (!equals(map[_key], "")) {return true;}
 
     // else, let's check if the key exists in the keyArray array
     for (uint256 i = 0; i < keyArray.length; i++) {

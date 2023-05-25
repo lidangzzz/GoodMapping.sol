@@ -5,7 +5,7 @@ pragma solidity ^0.8.9;
 // import "hardhat/console.sol";
 
 /**
- * @title Map with keyArray as uint256 and values as address
+ * @title Mapping Address to Uint256
  * @author lidangzzz
  * @notice Null.
  */

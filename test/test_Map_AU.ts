@@ -4,9 +4,9 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 
 
-describe("Map_UA test", function () {
+describe("Map_AU test", function () {
   it("Should pass test", async function () {
-    const Contract = await ethers.getContractFactory("Test_Map_UA");
+    const Contract = await ethers.getContractFactory("Test_Map_AU");
     const test_item = await Contract.deploy();
     test_item.deployed();
 
