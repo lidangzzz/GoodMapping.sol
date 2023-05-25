@@ -47,7 +47,7 @@ All the map contracts are named as ```Map_[KeyType][ValueType]```, in which `U` 
 | Map_SB        | string   | bytes      | 🚧 In progress |
 | Map_BB        | bytes    | bytes      | 🚧 In progress |
 
-Here are some key functions you can use.
+Here are some key functions you can use (for example, `Map_UA`)
 
 ### Set value with key-value pair
 
