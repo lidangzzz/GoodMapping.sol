@@ -5,7 +5,7 @@
   },
   "name": "goodmapping",
   "description": "Nothing fancy. Just a simple, easy, out-of-the-box mapping with keys in Solidity programming language.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "directories": {
     "test": "test"
   },
