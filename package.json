@@ -2,5 +2,27 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "hardhat": "^2.14.0"
-  }
+  },
+  "name": "goodmapping",
+  "description": "Nothing fancy. Just a simple, easy, out-of-the-box mapping with keys in Solidity programming language.",
+  "version": "1.0.0",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "/contracts/**/*.sol"
+  ],
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lidangzzz/GoodMapping.sol.git"
+  },
+  "author": "lidangzzz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lidangzzz/GoodMapping.sol/issues"
+  },
+  "homepage": "https://github.com/lidangzzz/GoodMapping.sol#readme"
 }
