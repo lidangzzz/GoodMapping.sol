@@ -16,16 +16,6 @@ npm install goodmapping
 
 ## Usage
 
-Import the mapping you need into your Solidity project, and initialize the contract Map_UA (uint256 => address) in your contract.
-
-```solidity
-import "goodmapping/contracts/Map_UA.sol";
-
-Contract MyContract {
-  Map_UA private map;
-}
-```
-
 All the map contracts are named as ```Map_[KeyType][ValueType]```, in which `U` represents `uint256`, `A` represents `address`, `S` represents `string`, `B` represents `bytes`. Here is a list of the available types in below table.
 
 (Since solidity does not support generic, we only provide some possible combinations of key-value pairs)
@@ -47,7 +37,19 @@ All the map contracts are named as ```Map_[KeyType][ValueType]```, in which `U` 
 | Map_SB        | string   | bytes      | 🚧 In progress |
 | Map_BB        | bytes    | bytes      | 🚧 In progress |
 
-Here are some key functions you can use (for example, `Map_UA`)
+Here are some key functions you can use (for example, `Map_UA`).
+
+### Import
+
+Import the correct contract you need into your Solidity project, and initialize the contract Map_UA (uint256 => address) in your contract.
+
+```solidity
+import "goodmapping/contracts/Map_UA.sol";
+
+Contract MyContract {
+  Map_UA private map;
+}
+```
 
 ### Set value with key-value pair
 
